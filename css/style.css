@@ -1,0 +1,397 @@
+/*
+ * style.css
+ *
+ * This file contains all the custom styles for the recipe application.
+ * Note: Minor adjustments were made to the .warning and .main-img rules 
+ * to ensure dynamic content and custom red vertical bar display correctly.
+ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Base Typography and Colors --- */
+.heading {
+    color: #101828;
+    font-weight: bold;
+}
+.gray {
+    color: #6a7282;
+}
+.gray-icon {
+    color: #4a5565;
+}
+
+body {
+    background-color: #fefce8;
+}
+
+/* --- Navbar Styling --- */
+nav.navbar{
+    background-color: white;
+    border: 2px solid #ffedd4;
+}
+.navbar-brand .nav-icon{
+    background-image: linear-gradient(#fb2d37,#ff6900);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.navbar-brand .nav-icon i{
+    font-size: 14px;
+    position: relative;
+    left: 28%;
+    top: 8%;
+}
+.navbar-brand .nav-text {
+    vertical-align: top;
+}
+.navbar-brand .nav-text h4{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.navbar-brand .nav-text p{
+    font-size: 12px;
+    margin-top: 0px;
+}
+.img-cont img{
+    width: 30px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-top: 7px;
+    margin-left: 8px;
+    border: 1px solid #ffb869;
+}
+.navbar-toggler {
+    border:none;
+}
+.navbar-toggler:focus {
+    box-shadow:none;
+}
+li.nav-item a.nav-link i{
+    transition: all 0.2s;
+}
+li.nav-item a.nav-link i:hover {
+    color: #ff6900;
+}
+
+/* --- Main Recipe Card Layout --- */
+main {
+    width: 80%;
+    margin: auto;
+}
+.main-img img {
+    height: 600px;
+    /* Added object-fit for reliable image display regardless of aspect ratio */
+    object-fit: cover; 
+    background-size: cover;
+    background-attachment: fixed;
+}
+.upper-star {
+    top: 5%;
+    left: 5%;
+    background-color: white;
+    height: fit-content;
+    border-radius: 18px;
+    padding: 10px 20px 0px 20px; 
+    font-size: 12px;
+}
+.upper-star i {
+    color: gold;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.upper-star p.heading {
+    margin-right: 8px;
+}
+div.second  {
+    background-color: white;
+    border-radius: 20px;
+    bottom: 2%;
+    left: 12%;
+    font-size: 14px;
+}
+div.second div i.orange {
+    color: #ff6900;
+}
+div.second div i.red {
+    color: #fb2c36;
+}
+div.second div i.blue {
+    color: #2b7fff;
+}
+.colored-cont .green-text {
+    background-color: #dcfce7;
+    border-radius: 12px;
+    font-size: 12px;
+    height: 20px;
+}
+.colored-cont .green-text p{
+    color: #008235;
+    font-size: 10px;
+    padding: 2px 10px 6px 10px;
+    font-weight: 600;
+}
+.colored-cont .blue-text {
+    background-color: #dbeafe;
+    border-radius: 12px;
+    font-size: 12px;
+    height: 20px;
+}
+.colored-cont .blue-text p{
+    color: #1447e6;
+    font-size: 10px;
+    padding: 2px 10px 6px 10px;
+    font-weight: 600;
+}
+.main-first h4 {
+    font-size: 35px;
+}
+.main-first .main-icons{
+    vertical-align: top;
+    margin-top: 5px;
+}
+.main-first .main-icons .i-1{
+    color: #f54900;
+    background-color: #ffedd4;
+    height: fit-content;
+    font-size: 14px;
+    padding: 10px 22px 10px 10px;
+    border-radius: 4px;
+}
+.main-first .main-icons .i-2{
+    margin-left: 20px;
+    color: #f54900;
+    background-color: #ffedd4;
+    height: fit-content;
+    font-size: 14px;
+    padding: 10px 25px 10px 10px;
+    border-radius: 4px;
+}
+.main-icons i.i-1 {
+    transition: all 0.3s;
+}
+.main-icons i.i-1:hover {
+    background-color: rgba(245, 73, 0,0.3);
+}
+.main-icons i.i-2 {
+    transition: all 0.3s;
+}
+.main-icons i.i-2:hover {
+    background-color: rgba(245, 73, 0,0.3);
+}
+
+/* --- Dynamic Warning Section Styling --- */
+/* This style defines the background and container for the warning */
+.warning {
+    background-color: #fef2f2;
+    position: relative;
+    z-index: 3;
+    padding: 15px; /* Ensures text has space inside the box */
+    border-radius: 12px;
+}
+/* This style defines the red vertical bar on the left */
+.warning::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 12px;
+    left: -0.5%;
+    top: 0%;
+    width: 6px;
+    height: 100%; /* Ensures the bar scales with the content height */
+    z-index: 1;
+}
+.warning-icon i {
+    color: #fb2c36;      
+    vertical-align: top;
+    margin-top: 10px;
+}
+.warning-text h6 {
+    color: #9f0712;
+}
+.warning-text p {
+    color: #e7000b;
+    font-size: 12px;
+}
+/* Override Bootstrap alert styles if they clash with .warning */
+.alert.alert-warning {
+    padding: 0; 
+    border: none; 
+    background-color: transparent; 
+}
+
+
+/* --- Tab Navigation and Content --- */
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius:none;
+    border-top-right-radius:none;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f54900;
+    background-color: transparent;
+    border-color: none;
+    position: relative;
+    font-weight: 600;
+}
+/* Orange underline for active tab */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active::after {
+    content: "";
+    position: absolute;
+    background-color: #f54900;
+    width: 135px;
+    height: 2px;
+    bottom: 0;
+    left: 0%;
+}
+.nav-item {
+    margin-bottom: 15px;
+}
+.nav-item button {
+    color: #6a7282;
+    transition: all 0.2s;
+}
+.nav-item button:hover {
+    color: #333a44;
+}
+.tab-pane {
+    margin-top: 20px;
+}
+
+/* Ingredients */
+.ing-cont {
+    background-color: #fefce8;
+}
+.ing-cont div span{
+    display: inline-block;
+    background-color: oklch(70.5% .213 47.604);
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-radius:50%; 
+    margin-right: 5px;
+    font-weight: bold;
+}
+.ing-cont div{
+    color: #6a7282;
+    padding: 10px;
+}
+
+/* Instructions */
+.inst-cont div{
+    color: #4a5565;
+    padding: 10px;
+}
+.inst-cont div span{
+    display: inline-block;
+    background-color: oklch(70.5% .213 47.604);
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding-top: 6px;
+    text-align: center;
+    font-size: 18px;
+    border-radius:12px; 
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* Nutrition */
+.col-md-6 {
+    background-color: #f9fafb;
+}
+span.orange i{
+    color: #f54900;
+    background-color: #ffedd4;
+    padding: 10px 24px 10px 10px;
+    border-radius: 6px;
+}
+span.blue i{
+    color: #155dfb;
+    background-color: #dbeafe;
+    padding: 10px 30px 10px 10px;
+    border-radius: 6px;
+}
+span.yellow i{
+    color: #d08700;
+    background-color: #fef9c2;
+    padding: 10px 24px 10px 10px;
+    border-radius: 6px;
+}
+span.red i{
+    color: #e7000b;
+    background-color: #ffe2e2;
+    padding: 10px 24px 10px 10px;
+    border-radius: 6px;
+}
+span.green i{
+    color: #00a63e;
+    background-color: #dcfce7;
+    padding: 10px 24px 10px 10px;
+    border-radius: 6px;
+}
+span.pink i{
+    color: #e60076;
+    background-color: #fce7f3;
+    padding: 10px 24px 10px 10px;
+    border-radius: 6px;
+}
+
+/* Chef's Tips */
+.tips-cont div span i{
+    background-color: #e17100;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+.tips-cont div.cont {
+    background-color: #fefce8;
+    border-radius: 12px;
+    z-index: 9999;
+    position: relative;
+}
+.tips-cont div.cont::before{
+    content: "";
+    position: absolute;
+    background-color: #d88b3e;
+    left: 0%;
+    top: 0%;
+    border-radius: 20px;
+    width: 5px;
+    height: 100%; /* Ensures the bar scales with the content height */
+    z-index: 1;
+}
+
+/* --- Button and Scroll Control --- */
+button.but {
+    background-image: linear-gradient(90deg,#ff6900,#fb2c36);
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+button.but:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(#fb2c36);
+}
+button.but div {
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.col-xl-7 {
+    overflow: auto;      
+    height: 600px;
+}
+.tab-pane {
+    overflow: auto;
+    height: 300px;      
+}
+.box {
+    display: none;
+}
