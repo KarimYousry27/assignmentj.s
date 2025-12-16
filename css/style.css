@@ -301,40 +301,40 @@ div.second div i.blue {
 }
 
 /* Nutrition */
-.col-md-6 {
+div.col-md-6 {
     background-color: #f9fafb;
 }
-span.orange i{
+span i.orange{
     color: #f54900;
     background-color: #ffedd4;
     padding: 10px 24px 10px 10px;
     border-radius: 6px;
 }
-span.blue i{
+span i.blue{
     color: #155dfb;
     background-color: #dbeafe;
     padding: 10px 30px 10px 10px;
     border-radius: 6px;
 }
-span.yellow i{
+span i.yellow{
     color: #d08700;
     background-color: #fef9c2;
     padding: 10px 24px 10px 10px;
     border-radius: 6px;
 }
-span.red i{
+span i.red{
     color: #e7000b;
     background-color: #ffe2e2;
     padding: 10px 24px 10px 10px;
     border-radius: 6px;
 }
-span.green i{
+span i.green{
     color: #00a63e;
     background-color: #dcfce7;
     padding: 10px 24px 10px 10px;
     border-radius: 6px;
 }
-span.pink i{
+span i.pink{
     color: #e60076;
     background-color: #fce7f3;
     padding: 10px 24px 10px 10px;
@@ -342,21 +342,22 @@ span.pink i{
 }
 
 /* Chef's Tips */
-.tips-cont div span i{
+.tips-cont div i{
     background-color: #e17100;
     font-size: 10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     padding-top: 5px;
+    color: white;
 }
-.tips-cont div.cont {
+.tips-cont div {
     background-color: #fefce8;
     border-radius: 12px;
     z-index: 9999;
     position: relative;
 }
-.tips-cont div.cont::before{
+.tips-cont div  ::before{
     content: "";
     position: absolute;
     background-color: #d88b3e;
@@ -367,7 +368,6 @@ span.pink i{
     height: 100%; /* Ensures the bar scales with the content height */
     z-index: 1;
 }
-
 /* --- Button and Scroll Control --- */
 button.but {
     background-image: linear-gradient(90deg,#ff6900,#fb2c36);
@@ -391,7 +391,4 @@ button.but div {
 .tab-pane {
     overflow: auto;
     height: 300px;      
-}
-.box {
-    display: none;
 }

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container w-75 m-auto">
+            <div class="d-flex navbar-brand gap-2">
+                <div class="nav-icon">
+                    <i class="fa-solid fa-utensils text-white"></i>
+                </div>
+                <div class="nav-text">
+                    <h4 class="heading">What's For Dinner</h4>
+                    <p class="gray">Your daily meal inspiration</p>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item d-flex">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bookmark gray-icon"></i></a>
+                        <p class="d-md-none mt-2 ms-1 gray">Saved Recipes</p>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-clock-rotate-left gray-icon"></i></a>
+                        <p class="d-md-none mt-2 ms-1 gray">Recent</p>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-gear gray-icon"></i></a>
+                        <p class="d-md-none mt-2 ms-1 gray">Settings</p>
+                    </li>
+                    <li class="nav-item d-flex">
+                        <div class="img-cont">
+                            <img src="imgs/avatar-4.jpg" alt="">
+                        </div>
+                        <p class="d-md-none mt-2 ms-1 gray">Profile</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<main class="p-5 box" id="container">
+  <div class="container bg-light rounded-4">
+    <div class="row">
+
+      <!-- IMAGE COLUMN -->
+      <div class="col-xl-5">
+        <div class="main-img position-relative">
+          <img src="" class="w-100 rounded-4" alt="" id="img">  
+
+          <div class="upper-star d-flex position-absolute">
+            <i class="fa-solid fa-star"></i>
+            <p class="heading ms-2" id="rating"></p>
+            <p class="gray ms-2" id="reviews"></p>
+          </div>
+
+          <div class="second d-flex p-3 gap-5 position-absolute">
+            <div class="text-center">
+              <i class="fa-solid fa-clock orange"></i>
+              <p class="gray">Prep Time</p>
+              <p class="heading" id="prep-time"></p>
+            </div>
+            <div class="text-center">
+              <i class="fa-solid fa-fire-burner red"></i>
+              <p class="gray">Cook Time</p>
+              <p class="heading" id="cook-time"></p>
+            </div>
+            <div class="text-center">
+              <i class="fa-solid fa-clock blue"></i>
+              <p class="gray">Servings</p>
+              <p class="heading" id="servings"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT COLUMN -->
+      <div class="col-xl-7 p-4">
+
+        <div class="colored-cont d-flex gap-4 mb-2">
+          <div class="green-text">
+            <p id="difficulty"></p>
+          </div>
+          <div class="blue-text">
+            <p id="region"></p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between main-first">
+          <h4 class="heading" id="name"></h4>
+          <div class="main-icons d-flex">
+            <i class="fa-solid fa-bookmark i-1"></i>
+            <i class="fa-solid fa-share-nodes i-2"></i>
+          </div>
+        </div>
+
+        <p class="gray" id="description"></p>
+
+        <!-- WARNING -->
+        <div class="warning d-flex p-3 pb-2 rounded-3 gap-2 mb-3 d-none" id="warning">
+          <div class="warning-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="warning-text">
+            <h6 class="mb-0">Extended Preparation Time</h6>
+            <p class="mt-0">
+              This recipe requires more than 45 minutes to prepare. Plan accordingly!
+            </p>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ingredients">
+              <i class="fa-solid fa-list-check"></i>
+              Ingredients
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#instructions">
+              <i class="fa-solid fa-book-open"></i>
+              Instructions
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nutrition">
+              <i class="fa-solid fa-chart-pie"></i>
+              Nutrition
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tips">
+              <i class="fa-solid fa-lightbulb"></i>
+              Chef's Tips
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+
+          <!-- INGREDIENTS -->
+          <div class="tab-pane fade show active" id="ingredients">
+            <div class="ing-cont rounded-3">
+              <div><span>1</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>2</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>3</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>4</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>5</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>6</span> <p class="ing d-inline-block mb-1"></p></div>
+              <div><span>7</span> <p class="ing d-inline-block mb-1"></p></div>
+            </div>
+          </div>
+
+          <!-- INSTRUCTIONS -->
+          <div class="tab-pane fade" id="instructions">
+            <div class="inst-cont">
+              <div class="d-flex gap-2"><span>1</span><p class="inst mb-1"></p></div>
+              <div class="d-flex gap-2"><span>2</span><p class="inst mb-1"></p></div>
+              <div class="d-flex gap-2"><span>3</span><p class="inst mb-1"></p></div>
+              <div class="d-flex gap-2"><span>4</span><p class="inst mb-1"></p></div>
+              <div class="d-flex gap-2"><span>5</span><p class="inst mb-1"></p></div>
+              <div class="d-flex gap-2"><span>6</span><p class="inst mb-1"></p></div>
+            </div>
+          </div>
+
+          <!-- NUTRITION -->
+          <div class="tab-pane fade" id="nutrition">
+            <div class="nutr-cont row g-4">
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-fire orange"></i> Calories</span>
+                <span id="calories"></span>
+              </div>
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-dumbbell blue"></i> Protein</span>
+                <span id="protien"></span>
+              </div>
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-wheat-awn yellow"></i> Carbs</span>
+                <span id="carb"></span>
+              </div>
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-droplet red"></i> Fat</span>
+                <span id="fat"></span>
+              </div>
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-seedling green"></i> Fiber</span>
+                <span id="fiber"></span>
+              </div>
+              <div class="col-md-6 d-flex justify-content-between">
+                <span><i class="fa-solid fa-cube pink"></i> Sodium</span>
+                <span id="sodium"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIPS -->
+          <div class="tab-pane fade" id="tips">
+            <div class="tips-cont">
+              <div class="d-flex gap-2 mb-4 p-3">
+                <i class="fa-solid fa-check text-success text-white"></i>
+                <p class="tip mb-0"></p>
+              </div>
+              <div class="d-flex gap-2 mb-4 p-3">
+                <i class="fa-solid fa-check text-success  text-white"></i>
+                <p class="tip mb-0"></p>
+              </div>
+              <div class="d-flex gap-2 mb-4 p-3">
+                <i class="fa-solid fa-check text-success text-white"></i>
+                <p class="tip mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <hr>
+
+        <button class="but mt-3 text-white p-3" id="button">
+          <i class="fa-solid fa-rotate"></i>
+          <span>Try Another Recipe</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/recipes.js"></script>
+</body>
+
+</html>
