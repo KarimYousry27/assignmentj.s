@@ -18,4 +18,3 @@ var arr = [
     button.addEventListener("click",function(){
         arr[randomIndex].style.display = index === randomIndex ? "block" : "none";
 }
-)
